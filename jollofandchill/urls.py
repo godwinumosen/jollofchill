@@ -5,6 +5,7 @@ from . import views
 #from .views import SubPictureDetailView,SubVideoDetailView
 
 urlpatterns = [
+    path('', views.index, name='index'),  # This handles the root URL
     path('index/', views.index, name='index'),
     #path('', HomeView.as_view(), name="home"),
     #path('home/', HomeView.as_view(), name='home'),
