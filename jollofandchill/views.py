@@ -17,10 +17,10 @@ def base_view(request):
     return render(request, 'base.html')
 
 #The main HomeView page
-class HomeView(ListView): 
+'''class HomeView(ListView): 
     model = DeusMagnusMainPost 
     template_name = 'jollofandchill/home.html'
     #This model is for the second deus magnus sub category of the blog
-    '''def get_context_data(self, **kwargs):  
+    def get_context_data(self, **kwargs):  
         context = super().get_context_data(**kwargs)   
         return context  '''  
