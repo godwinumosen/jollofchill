@@ -3,40 +3,71 @@
 {% block content%}
 
     <body>
-        <!-- Carousel Start -->
-        <div class="container-fluid overflow-hidden px-0">
-            <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
-                <ol class="carousel-indicators fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1s" style="animation-delay: 1s;">
-                    <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></li>
-                    <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
-                    <li data-bs-target="#carouselId" data-bs-slide-to="2" aria-label="Third slide"></li>
-                </ol>
-                <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
-                        <img src="{% static 'img/carousel-1.jpg '%}" class="img-fluid w-100" alt="First slide"/>
-                        <div class="carousel-caption">
-                            <p class="text-uppercase text-secondary fs-4 mb-0 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1s" style="animation-delay: 1s;">Construction Business</p>
-                            <h2 class="text-capitalize text-white mb-4 fadeInUp animate__animated"data-animation="fadeInUp" data-delay="1.3s" style="font-size: 2.5rem; animation-delay: 1.3s;">We build somethings new and consistent.</h2>
-                            <p class="mb-5 fs-5 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.5s" style="animation-delay: 1.5s;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsue 1500s,</p>
-                            <div class="d-flex justify-content-center">
-                                <a class="btn btn-primary d-flex py-3 px-5 me-2 flex-shrink-0 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.5s" style="animation-delay: 1.7s;" href="#">Apply Now</a>
-                                <a class="btn btn-secondary d-inline-block py-3 px-5 ms-2 flex-shrink-0 fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1.5s" style="animation-delay: 1.7s;" href="#">Read More</a>
-                            </div>
-                        </div>
+     <!-- Carousel Start -->
+<div class="container-fluid overflow-hidden px-0">
+    <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+        <ol class="carousel-indicators fadeInUp animate__animated" data-animation="fadeInUp" data-delay="1s" style="animation-delay: 1s;">
+            {% for post in object_list %}
+            <li data-bs-target="#carouselId" data-bs-slide-to="{{ forloop.counter0 }}" class="{% if forloop.first %}active{% endif %}" aria-label="Slide {{ forloop.counter }}"></li>
+            {% endfor %}
+        </ol>
+
+        <div class="carousel-inner" role="listbox">
+            {% for post in object_list %}
+            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                <img src="{{ post.hero_img.url }}" class="img-fluid w-100" alt="Slide {{ forloop.counter }}" />
+                <div class="carousel-caption">
+                    <p class="text-uppercase text-secondary fs-4 mb-0 fadeInUp animate__animated"
+                       data-animation="fadeInUp" data-delay="1s"
+                       style="animation-delay: 1s;">
+                        {{ post.hero_title_head }}
+                    </p>
+                    <h2 class="text-capitalize text-white mb-4 fadeInUp animate__animated"
+                        data-animation="fadeInUp" data-delay="1.3s"
+                        style="font-size: 2.5rem; animation-delay: 1.3s;">
+                        {{ post.hero_title }}
+                    </h2>
+                    <p class="mb-5 fs-5 fadeInUp animate__animated"
+                       data-animation="fadeInUp" data-delay="1.5s"
+                       style="animation-delay: 1.5s;">
+                        {{ post.hero_description }}
+                    </p>
+                    <div class="d-flex justify-content-center">
+                        <a class="btn btn-primary d-flex py-3 px-5 me-2 flex-shrink-0 fadeInUp animate__animated"
+                           data-animation="fadeInUp" data-delay="1.5s"
+                           style="animation-delay: 1.7s;" href="#">
+                           Apply Now
+                        </a>
+                        <a class="btn btn-secondary d-inline-block py-3 px-5 ms-2 flex-shrink-0 fadeInUp animate__animated"
+                           data-animation="fadeInUp" data-delay="1.5s"
+                           style="animation-delay: 1.7s;" href="#">
+                           Read More
+                        </a>
                     </div>
                 </div>
-
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon btn-lg-square fadeInLeft animate__animated" aria-hidden="true" data-animation="fadeInLeft" data-delay="1.1s" style="animation-delay: 1.3s;"><i class="fas fa-chevron-left fa-2x"></i></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
-                    <span class="carousel-control-next-icon btn-lg-square fadeInRight animate__animated" aria-hidden="true" data-animation="fadeInRight" data-delay="1.1s" style="animation-delay: 1.3s;"><i class="fas fa-chevron-right fa-2x"></i></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
+            {% endfor %}
         </div>
-        <!-- Carousel End -->
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon btn-lg-square fadeInLeft animate__animated" aria-hidden="true"
+                  data-animation="fadeInLeft" data-delay="1.1s" style="animation-delay: 1.3s;">
+                <i class="fas fa-chevron-left fa-2x"></i>
+            </span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+            <span class="carousel-control-next-icon btn-lg-square fadeInRight animate__animated" aria-hidden="true"
+                  data-animation="fadeInRight" data-delay="1.1s" style="animation-delay: 1.3s;">
+                <i class="fas fa-chevron-right fa-2x"></i>
+            </span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+<!-- Carousel End -->
+
+
 
         <!-- About Start -->
         <div class="container-fluid about py-5">
@@ -53,10 +84,9 @@
                     </div>
                     <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.1s">
                         <div class="about-item-content">
-                            <p class="text-uppercase text-secondary fs-5 mb-0">WE ARE CONSTRUCTION COMPANY</p>
-                            <h2 class="display-4 text-capitalize mb-3">Making your vision come true at the basics.</h2>
-                            <p class="mb-4 fs-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                            </p>
+                            <p class="text-uppercase text-secondary fs-5 mb-0">Redefining excellence in restaurant</p><br>
+                            <h5 class=" text-capitalize mb-3">At Jollof and Chill, we’re redefining restaurant excellence with bold flavors, 
+                                warm vibes, and unforgettable experiences</h5>            
                             <div class="pb-4 mb-4 border-bottom">
                                 <div class="row g-4">
                                     <div class="col-lg-4">
@@ -69,28 +99,28 @@
                                             <div class="text-secondary">
                                                 <i class="fas fa-user-shield fa-3x"></i>
                                             </div>
-                                            <h4 class="ms-3">Building quality standards</h4>
+                                            <h4 class="ms-3">Premium Quality You Can Taste</h4>
                                         </div>
                                         <div class="d-flex">
                                             <div class="text-secondary">
                                                 <i class="fas fa-users-cog fa-3x"></i>
                                             </div>
-                                            <h4 class="ms-3">Certified engineer’s team</h4>
+                                            <h4 class="ms-3">Excellence in Every Bite</h4>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row gy-0 gx-4 justify-content-between pb-4">
                                 <div class="col-lg-6">
-                                    <p class="text-dark"><i class="fas fa-check text-secondary me-1"></i> 100% Satisfaction</p>
+                                    <p class="text-dark"><i class="fas fa-check text-secondary me-1"></i> 100% Guest Satisfaction</p>
                                     <p class="text-dark"><i class="fas fa-check text-secondary me-1"></i> Trained Emploies</p>
                                 </div>
                                 <div class="col-lg-6">
-                                    <p class="text-dark"><i class="fas fa-check text-secondary me-1"></i> Annual Pass Programs</p>
-                                    <p class="text-dark mb-0"><i class="fas fa-check text-secondary me-1"></i> Flexible and cost effective</p>
+                                    <p class="text-dark"><i class="fas fa-check text-secondary me-1"></i> Professionally Trained Staff</p>
+                                    <p class="text-dark mb-0"><i class="fas fa-check text-secondary me-1"></i> Flexible & Affordable</p>
                                 </div>
                             </div>
-                            <a class="btn btn-secondary d-inline-block py-3 px-5 me-2 flex-shrink-0 wow fadeInUp" data-wow-delay="0.1s" href="#">Discover More</a>
+                            <a class="btn btn-secondary d-inline-block py-3 px-5 me-2 flex-shrink-0 wow fadeInUp" data-wow-delay="0.1s" href="#">About Us</a>
                         </div>
                     </div>
                 </div>
@@ -103,7 +133,7 @@
             <div class="container py-5">
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                     <p class="text-uppercase text-secondary fs-5 mb-0">Commitment</p>
-                    <h2 class="display-4 text-capitalize mb-3">With over 15 years of construction experience</h2>
+                    <h2 class=" text-capitalize mb-3">With over 15 years of construction experience</h2>
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
@@ -144,7 +174,7 @@
             <div class="container pb-5">
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                     <p class="text-uppercase text-secondary fs-5 mb-0">News & Blog</p>
-                    <h2 class="display-4 text-capitalize mb-3">Our latest news post and articles?</h2>
+                    <h2 class=" text-capitalize mb-3">Our latest news post and articles?</h2>
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
@@ -203,7 +233,7 @@
             <div class="container pb-5">
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                     <p class="text-uppercase text-secondary fs-5 mb-0">Our Services</p>
-                    <h2 class="display-4 text-capitalize mb-3">our service is creative, & decent</h2>
+                    <h2 class=" text-capitalize mb-3">our service is creative, & decent</h2>
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
@@ -293,7 +323,7 @@
             <div class="container pb-5">
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                     <p class="text-uppercase text-secondary fs-5 mb-0">Testimonials</p>
-                    <h2 class="display-4 text-capitalize mb-3">Our clients reviews.</h2>
+                    <h2 class=" text-capitalize mb-3">Our clients reviews.</h2>
                 </div>
                 <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.4s">
                     <div class="testimonial-item bg-light p-4">
