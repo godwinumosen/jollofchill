@@ -11,28 +11,31 @@
 <div class="container py-5">
   <!-- Header -->
   <div class="text-center mb-4">
-    <h1 class="display-5">The Golden Spoon</h1>
-    <p class="text-muted">Fine Dining | African & Continental Cuisine</p>
+    <h1 class="display-5">Jollof and Chill</h1>
+    <p class="text-muted">Fine Dining & Continental Cuisine</p>
   </div>
 
   <!-- Image & Info -->
   <div class="row g-4">
     <div class="col-md-6">
-      <img src="https://via.placeholder.com/600x400" class="img-fluid rounded" alt="Restaurant Image">
+      <img src="{{ object.second_jollof_and_chill_img.url }}" class="img-fluid rounded" alt="Restaurant Image">
     </div>
     <div class="col-md-6">
-      <h3>About Us</h3>
-      <p>For over 10 years, The Golden Spoon has delighted guests with elegant dining experiences, world-class service, and flavors that tell stories.</p>
+      <h3>At a Glance</h3>
+      <p>Serving authentic flavours with love and tradition for over 10 years..</p>
       
       <ul class="list-group list-group-flush">
-        <li class="list-group-item"><strong>Location:</strong> 123 Main Street, Lagos</li>
-        <li class="list-group-item"><strong>Opening Hours:</strong> 12 PM – 11 PM (Daily)</li>
-        <li class="list-group-item"><strong>Contact:</strong> +234 800 000 0000</li>
-        <li class="list-group-item"><strong>Specialties:</strong> Jollof Rice, Grilled Tilapia, Signature Cocktails</li>
+        <li class="list-group-item"><strong>Title:</strong> {{ object.second_jollof_and_chill_title }}</li>
+        <li class="list-group-item"><strong>Opening Hours:</strong> 8 AM – 11 PM (Daily)</li>
+        <li class="list-group-item"><strong>description:</strong>{{ object.second_jollof_and_chill_description }}</li>
       </ul>
 
-      <a href="#" class="btn btn-primary mt-4">Make a Reservation</a>
+      <a href="#" class="btn btn-primary mt-4">Make an Order</a><br><br>
+        <div class="btn-wrapper">
+      <a href=""onclick="history.back(); return false;" class="btn btn-primary"style="border-radius: 5px;font-family: Georgia;"> Back </a>
+      </div>
     </div>
+   
   </div>
 </div>
 
