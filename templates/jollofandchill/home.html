@@ -179,23 +179,25 @@
                     <h2 class=" text-capitalize mb-3">Delicious service, plated with care</h2>
                 </div>
                 <div class="row g-4">
+                    {% for jollofandchill in jollofandchills %}
                     <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
                         <div class="service-item">
                             <div class="service-img">
                                 <img src="{% static 'img/service-2.jpg'%}" class="img-fluid w-100" alt="Image">
                             </div>
                             <div class="service-content text-center p-4">
-                                <a href="#" class="d-block fs-4 my-4">Property Maintenance</a>
-                                <p class="text-white mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, minima!</p>
+                                <a href="#" class="d-block fs-4 my-4">{{ jollofandchill.second_jollof_and_chill_title }}</a>
+                                <p class="text-white mb-4">{{ jollofandchill.second_jollof_and_chill_description }}</p>
                                 <a class="btn btn-secondary py-2 px-4" href="#">Read More</a>
                             </div>
                             <div class="service-tytle">
                                 <div class="d-flex align-items-center justify-content-start ps-4 w-100">
-                                    <h4>Property Maintenance</h4>
+                                    <h4>{{ jollofandchill.second_jollof_and_chill_title }}</h4>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
