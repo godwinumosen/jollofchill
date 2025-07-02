@@ -43,3 +43,6 @@ def contact (request):
 
 def About (request):
     return render (request, 'jollofandchill/about_us.html')
+
+def Order (request):
+    return render (request, 'jollofandchill/order.html')

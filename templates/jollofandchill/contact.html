@@ -5,45 +5,53 @@
 
 {% block content %}
 <!-- Hero Section -->
-<section class="py-5 bg-dark text-white text-center">
+<section class="py-5 text-white text-center" style="background-color: #98681e;">
   <div class="container">
     <h1 class="display-5 fw-bold">Get in Touch</h1>
     <p class="lead">We’d love to hear from you — reach us any time.</p>
   </div>
 </section>
 
-<!-- Contact Section -->
+
 <div class="container py-5">
-  <div class="row g-5">
-    <!-- Contact Info -->
-    <div class="col-md-6">
-      <h3 class="mb-4">Contact Information</h3>
-      <div class="mb-4 d-flex align-items-start">
-        <i class="fas fa-map-marker-alt fa-2x text-primary me-3"></i>
-        <div>
-          <h5 class="mb-1">Address</h5>
-          <p class="mb-0">123 Food Street, Lagos, Nigeria</p>
-        </div>
-      </div>
-
-      <div class="mb-4 d-flex align-items-start">
-        <i class="fas fa-envelope fa-2x text-primary me-3"></i>
-        <div>
-          <h5 class="mb-1">Email</h5>
-          <p class="mb-0">contact@jollofandchill.com</p>
-        </div>
-      </div>
-
-      <div class="mb-4 d-flex align-items-start">
-        <i class="fab fa-whatsapp fa-2x text-success me-3"></i>
-        <div>
-          <h5 class="mb-1">WhatsApp</h5>
-          <p class="mb-0"><a href="https://wa.me/2348123456789" class="text-decoration-none">+234 812 345 6789</a></p>
-        </div>
+  <div class="row text-center">
+      <!-- WhatsApp -->
+    <div class="col-md-4 mb-4">
+      <div class="p-4 border rounded shadow-sm h-100">
+        <i class="fab fa-whatsapp fa-2x text-success mb-3"></i>
+        <h5 class="mb-2">WhatsApp</h5>
+        <p><a href="https://wa.me/2348123456789" class="text-decoration-none text-dark">+234 812 345 6789</a></p>
       </div>
     </div>
+       <!-- Email -->
+    <div class="col-md-4 mb-4">
+      <div class="p-4 border rounded shadow-sm h-100">
+        <i class="fas fa-envelope fa-2x text-primary mb-3"></i>
+        <h5 class="mb-2">Email Us</h5>
+        <p><a href="mailto:contact@jollofandchill.com" class="text-decoration-none text-dark">contact@jollofandchill.com</a></p>
+      </div>
+    </div>
+    <!-- Address -->
+    <div class="col-md-4 mb-4">
+      <div class="p-4 border rounded shadow-sm h-100">
+        <i class="fas fa-map-marker-alt fa-2x text-primary mb-3"></i>
+        <h5 class="mb-2">Our Location On Map</h5>
+        <p><a href="https://g.co/kgs/VdyZptV"target="_blank">17 Showell Road Wolverhampton WV10 9LU</a></p>
+      </div>
+    </div>
+  </div>
+</div>
 
-    <!-- Contact Form -->
+<!-- Contact Section -->
+<div class="container py-5">
+  <div class="row g-5 align-items-center">
+    
+    <!-- Image Column -->
+    <div class="col-md-6">
+      <img src="{% static 'img/ff.jpg' %}"style="border-radius: 12px;" alt="Contact Us" class="img-fluid rounded shadow">
+    </div>
+
+    <!-- Contact Form Column -->
     <div class="col-md-6">
       <h3 class="mb-4">Send a Message</h3>
       <form method="POST" action="">
@@ -65,4 +73,5 @@
     </div>
   </div>
 </div>
+
 {% endblock %}
