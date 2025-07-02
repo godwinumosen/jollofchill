@@ -35,7 +35,7 @@
                     <div class="d-flex justify-content-center">
                         <a class="btn btn-primary d-flex py-3 px-5 me-2 flex-shrink-0 fadeInUp animate__animated"
                            data-animation="fadeInUp" data-delay="1.5s"
-                           style="animation-delay: 1.7s;" href="#">
+                           style="animation-delay: 1.7s;border-radius: 12px;" href="#">
                            Order Now
                         </a>
                     </div>
@@ -64,48 +64,6 @@
 
 
 
-        <!-- Features Start -->
-        <div class="container-fluid feature bg-light py-5">
-            <div class="container py-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                    <p class="text-uppercase text-secondary fs-5 mb-0">Commitment</p>
-                    <h5 class=" text-capitalize mb-3">With over 10 years of hospitality</h5>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="feature-item text-center border p-5">
-                            <div class="feature-img bg-secondary d-inline-flex p-4">
-                                <i class="fas fa-coffee text-primary"></i>
-                            </div>
-                            <a href="#" class="h4 d-block my-4">Hospitality Professionalsr</a>
-                            <p class="mb-0">A team dedicated to making every dining moment seamless and special.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="feature-item text-center border p-5">
-                            <div class="feature-img bg-secondary d-inline-flex p-4">
-                                <i class="fas fa-concierge-bell text-primary"></i>
-                            </div>
-                            <a href="#" class="h4 d-block my-4">Ingredient Integrity</a>
-                            <p class="mb-0">Only the freshest, locally sourced, and ethically selected ingredients make it to your plate.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="feature-item text-center border p-5">
-                            <div class="feature-img bg-secondary d-inline-flex p-4">
-                                <i class="fas fa-utensils text-primary"></i>
-                                
-                            </div>
-                            <a href="#" class="h4 d-block my-4">Free Menu Consultations</a>
-                            <p class="mb-0">Planning an event or special dinner? We’ll help you craft the perfect menu—no extra cost.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Features End -->
-
-
 
 
         <!-- About Start -->
@@ -113,7 +71,7 @@
             <div class="container py-5">
                 <div class="row g-5 align-items-center">
                     <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.1s">
-                        <div class="about-item-image d-flex">
+                        <div class="about-item-image d-flex"style="border-radius: 12px;">
                             <img src="{% static 'img/about.jpg'%}" class="img-1 img-fluid w-50"  alt="">
                             <img src="{% static 'img/about-3.jpg'%}" class="img-2 img-fluid w-50"  alt="">
                             <div class="about-item-image-content">
@@ -159,7 +117,7 @@
                                     <p class="text-dark mb-0"><i class="fas fa-check text-secondary me-1"></i> Flexible & Affordable</p>
                                 </div>
                             </div>
-                            <a class="btn btn-secondary d-inline-block py-3 px-5 me-2 flex-shrink-0 wow fadeInUp" data-wow-delay="0.1s" href="#">About Us</a>
+                           <a class="btn btn-secondary d-inline-block py-3 px-5 me-2 flex-shrink-0 wow fadeInUp" data-wow-delay="0.1s" href="{% url 'about' %}" style="border-radius: 12px;">About Us</a>
                         </div>
                     </div>
                 </div>
@@ -167,6 +125,49 @@
         </div>
         <!-- About End -->
 
+
+
+
+        <!-- Features Start -->
+        <div class="container-fluid feature bg-light py-5">
+            <div class="container py-5">
+                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                    <p class="text-uppercase text-secondary fs-5 mb-0">Commitment</p>
+                    <h5 class=" text-capitalize mb-3">With over 10 years of hospitality</h5>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="feature-item text-center border p-5">
+                            <div class="feature-img bg-secondary d-inline-flex p-4"style="border-radius: 12px;">
+                                <i class="fas fa-coffee text-primary"></i>
+                            </div>
+                            <a href="#" class="h4 d-block my-4">Hospitality Professionalsr</a>
+                            <p class="mb-0">A team dedicated to making every dining moment seamless and special.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="feature-item text-center border p-5">
+                            <div class="feature-img bg-secondary d-inline-flex p-4"style="border-radius: 12px;">
+                                <i class="fas fa-concierge-bell text-primary"></i>
+                            </div>
+                            <a href="#" class="h4 d-block my-4">Ingredient Integrity</a>
+                            <p class="mb-0">Only the freshest, locally sourced, and ethically selected ingredients make it to your plate.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="feature-item text-center border p-5">
+                            <div class="feature-img bg-secondary d-inline-flex p-4"style="border-radius: 12px;">
+                                <i class="fas fa-utensils text-primary"></i>
+                                
+                            </div>
+                            <a href="#" class="h4 d-block my-4">Free Menu Consultations</a>
+                            <p class="mb-0">Planning an event or special dinner? We’ll help you craft the perfect menu—no extra cost.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Features End -->
 
 
 
@@ -183,7 +184,7 @@
                     <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
                         <div class="service-item">
                             <div class="service-img">
-                                <img src="{{ jollofandchill.second_jollof_and_chill_img.url }}" class="img-fluid w-100" alt="Image">
+                                <img src="{{ jollofandchill.second_jollof_and_chill_img.url }}"style="border-radius: 12px;" class="img-fluid w-100" alt="Image">
                             </div>
                             <div class="service-content text-center p-4">
                                 <a href="#" class="d-block fs-4 my-4">{{ jollofandchill.second_jollof_and_chill_title }}</a>
@@ -202,6 +203,7 @@
             </div>
         </div>
         <!-- Services End -->
+
 
 
        
@@ -234,56 +236,6 @@
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star text-muted"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item bg-light p-4">
-                        <div class="position-relative">
-                            <i class="fa fa-quote-right fa-2x text-primary position-absolute" style="bottom: 30px; right: 0;"></i>
-                            <div class="mb-4 pb-4 border-bottom border-secondary">
-                                <p class="mb-0">Lorem Ipsum is simply dummy text of the printing Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                </p>
-                            </div>
-                            <div class="d-flex align-items-center flex-nowrap">
-                                <div class="me-4">
-                                    <img src="{% static 'img/testimonial-2.jpg'%}" class="img-fluid w-100" style="width: 100px; height: 100px;" alt="">
-                                </div>
-                                <div class="d-block">
-                                    <h4 class="text-dark">Client Name</h4>
-                                    <p class="m-0 pb-3">Profession</p>
-                                    <div class="d-flex text-secondary pe-5">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star text-muted"></i>
-                                        <i class="fas fa-star text-muted"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item bg-light p-4">
-                        <div class="position-relative">
-                            <i class="fa fa-quote-right fa-2x text-primary position-absolute" style="bottom: 30px; right: 0;"></i>
-                            <div class="mb-4 pb-4 border-bottom border-secondary">
-                                <p class="mb-0">Lorem Ipsum is simply dummy text of the printing Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                </p>
-                            </div>
-                            <div class="d-flex align-items-center flex-nowrap">
-                                <div class="me-4">
-                                    <img src="{% static 'img/testimonial-3.jpg'%}" class="img-fluid w-100" style="width: 100px; height: 100px;" alt="">
-                                </div>
-                                <div class="d-block">
-                                    <h4 class="text-dark">Client Name</h4>
-                                    <p class="m-0 pb-3">Profession</p>
-                                    <div class="d-flex text-secondary pe-5">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
                                     </div>
                                 </div>
                             </div>

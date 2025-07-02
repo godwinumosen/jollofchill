@@ -39,3 +39,6 @@ class JolloAndChillArticleDetailView(DetailView):
     
 def contact (request):
     return render (request, 'jollofandchill/contact.html')
+
+def About (request):
+    return render (request, 'jollofandchill/about_us.html')

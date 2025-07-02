@@ -11,6 +11,8 @@ urlpatterns = [
     path('home/', HomeView.as_view(), name='home'),
     path('article/<int:pk>/', JolloAndChillArticleDetailView.as_view(), name="detail"),
     #path('article2/<int:pk>/', SecondConstructionDetailViewArticleDetailView.as_view(), name="second_detail"),
+    path('about/', views.About, name='about'),
+    
 ]
 
 

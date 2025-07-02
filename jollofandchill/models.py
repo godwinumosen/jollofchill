@@ -4,7 +4,7 @@ from django.urls import reverse
 
 from datetime import datetime, date
 
-#The first main video on deusmagnus website
+#The first main video on jollof website
 
 class JollofandChillHeroHead(models.Model):
     hero_title_head = models.CharField(max_length=255, blank=True, null=True)
@@ -41,6 +41,27 @@ class SecondJollofandChillPostModel(models.Model):
     
     def __str__(self):
         return self.second_jollof_and_chill_title + ' | ' + str(self.second_jollof_and_chill_author)
+    
+    def get_absolute_url(self):
+        return reverse('home')
+    
+
+
+class ReviewJollofandChill(models.Model):
+    review_name = models.CharField(max_length=255, blank=True, null=True)
+    review_profession = models.CharField(max_length=255, blank=True, null=True)
+    review_description = models.TextField()
+    review_slug = models.SlugField (max_length=255,blank=True, null=True)
+    review_img = models.ImageField(upload_to='review_images/') 
+    review_publish_date = models.DateTimeField (auto_now_add= True)
+    review_author = models.ForeignKey(User, on_delete=models.CASCADE)
+
+       
+    class Meta:
+        ordering =['-review_publish_date']
+    
+    def __str__(self):
+        return self.review_name + ' | ' + str(self.review_author)
     
     def get_absolute_url(self):
         return reverse('home')

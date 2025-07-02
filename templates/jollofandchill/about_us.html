@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section with Blue Background -->
+<section class="py-5 text-white text-center" style="background-color: #98681e;">
+  <div class="container">
+    <h1 class="display-4 fw-bold">About Us</h1>
+    <p class="lead">Discover our journey, passion, and what makes us more than just a restaurant.</p>
+  </div>
+</section>
+
+
+<!-- Main About Content -->
+<div class="container py-5">
+  <div class="row align-items-center g-5 mb-5">
+    <div class="col-lg-6">
+      <img src="{% static 'img/about.jpg' %}" class="img-fluid rounded" alt="About Image">
+    </div>
+    <div class="col-lg-6">
+      <h2>Who We Are</h2>
+      <p>For over a decade, Jollof and Chill shared rich flavours, warm hospitality, and unforgettable dining moments. At Jollof and Chill, 
+        every meal is made with passion and tradition, celebrating the essence of good food and great company.</p>
+      <ul class="list-unstyled">
+        <li><i class="fas fa-check-circle text-primary me-2"></i> Over 10 years of culinary excellence</li>
+        <li><i class="fas fa-check-circle text-primary me-2"></i> Quality ingredients, always fresh</li>
+        <li><i class="fas fa-check-circle text-primary me-2"></i> Friendly service with a smile</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Values Section -->
+  <div class="row text-center">
+    <div class="col-md-4 mb-4">
+      <div class="p-4 border rounded shadow-sm h-100">
+        <i class="fas fa-utensils fa-2x text-primary mb-3"></i>
+        <h5 class="mb-2">Authentic Taste</h5>
+        <p>Delivering traditional and modern dishes with bold, unforgettable flavours.</p>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="p-4 border rounded shadow-sm h-100">
+        <i class="fas fa-heart fa-2x text-primary mb-3"></i>
+        <h5 class="mb-2">Passion for Service</h5>
+        <p>We treat every guest like family — with warmth, respect, and care.</p>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="p-4 border rounded shadow-sm h-100">
+        <i class="fas fa-leaf fa-2x text-primary mb-3"></i>
+        <h5 class="mb-2">Fresh Ingredients</h5>
+        <p>From market to plate, we choose only the best and freshest produce.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
