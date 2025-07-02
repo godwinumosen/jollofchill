@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.urls import reverse
 from django.urls import reverse_lazy
-from .models import JollofandChillHeroHead,SecondJollofandChillPostModel
+from .models import JollofandChillHeroHead,SecondJollofandChillPostModel,ReviewJollofandChill
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth.mixins import LoginRequiredMixin  
@@ -23,8 +23,9 @@ class HomeView(ListView):
     #This model is for the second deus magnus sub category of the blog
     def get_context_data(self, **kwargs):  
         context = super().get_context_data(**kwargs)   
-    #the first deus magnus home video
+    #the first deus magnus home video 
         context['jollofandchills'] = SecondJollofandChillPostModel.objects.all() 
+        context['reviewjollofandchills'] = ReviewJollofandChill.objects.all()
         return context  
 
     
