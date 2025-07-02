@@ -24,3 +24,23 @@ class JollofandChillHeroHead(models.Model):
     
     def get_absolute_url(self):
         return reverse('home')
+    
+    
+
+class SecondJollofandChillPostModel(models.Model):
+    second_jollof_and_chill_title = models.CharField(max_length=255, blank=True, null=True)
+    second_jollof_and_chill_description = models.TextField()
+    second_jollof_and_chill_slug = models.SlugField (max_length=255,blank=True, null=True)
+    second_jollof_and_chill_img = models.ImageField(upload_to='images/') 
+    second_jollof_and_chill_publish_date = models.DateTimeField (auto_now_add= True)
+    second_jollof_and_chill_author = models.ForeignKey(User, on_delete=models.CASCADE)
+
+       
+    class Meta:
+        ordering =['-second_jollof_and_chill_publish_date']
+    
+    def __str__(self):
+        return self.second_jollof_and_chill_title + ' | ' + str(self.second_jollof_and_chill_author)
+    
+    def get_absolute_url(self):
+        return reverse('home')
