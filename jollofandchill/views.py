@@ -61,3 +61,6 @@ def About (request):
 
 def Order (request):
     return render (request, 'jollofandchill/order.html')
+
+def Wallect (request):
+    return render (request, 'jollofandchill/wallect.html')
