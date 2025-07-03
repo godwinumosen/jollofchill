@@ -39,7 +39,22 @@ class JolloAndChillArticleDetailView(DetailView):
     
     
 def contact (request):
-    return render (request, 'jollofandchill/contact.html')
+    email='Jollofandchill17@gmail.com'
+    if request.method == 'POST':
+        message_name = request.POST['message-name']
+        message_email = request.POST['message-email']
+        #message_subject = request.POST['message-subject']
+        message = request.POST['message'] 
+        messages.success(request, f'Your email was Successfully sent to Jollo and Chill {message_name}..!')
+        return redirect('/message')
+    else:
+        context={
+            'email':email
+        } 
+        return render(request, 'jollofandchill/contact.html', {})
+
+def message (request):
+    return render (request, 'jollofandchill/message.html', {})
 
 def About (request):
     return render (request, 'jollofandchill/about_us.html')

@@ -13,6 +13,7 @@ urlpatterns = [
     path('order/', views.Order, name='order'),
     #path('article2/<int:pk>/', SecondConstructionDetailViewArticleDetailView.as_view(), name="second_detail"),
     path('about/', views.About, name='about'),
+    path('message/', views.message, name='message'),
     
 ]
 
