@@ -64,3 +64,6 @@ def Order (request):
 
 def Wallect (request):
     return render (request, 'jollofandchill/wallect.html')
+
+def Menu (request):
+    return render (request, 'jollofandchill/menu.html')
