@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.urls import reverse
 from django.urls import reverse_lazy
-from .models import JollofandChillHeroHead,SecondJollofandChillPostModel,ReviewJollofandChill
+from .models import JollofandChillHeroHead,SecondJollofandChillPostModel,ReviewJollofandChill,MenuJollofandChil
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth.mixins import LoginRequiredMixin  
@@ -67,3 +67,16 @@ def Wallect (request):
 
 def Menu (request):
     return render (request, 'jollofandchill/menu.html')
+
+#This deus_magnus_events view
+class Menu(ListView):
+    model = MenuJollofandChil
+    template_name = 'jollofandchill/menu.html'
+
+#The event of deus magnus' article details class base view
+class MenuArticleDetailView(DetailView):
+    model = MenuJollofandChil
+    template_name = 'jollofandchill/menu_article.html'
+    def MenuArticleDetailView(request, pk): 
+        object = get_object_or_404(MenuJollofandChil, pk=pk)
+        return render(request, 'jollofandchill/menu_article.html',{'menu_detail': object})

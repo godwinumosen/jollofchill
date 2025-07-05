@@ -65,3 +65,32 @@ class ReviewJollofandChill(models.Model):
     
     def get_absolute_url(self):
         return reverse('home')
+    
+
+
+from django.db import models
+from django.urls import reverse
+
+class MenuJollofandChil(models.Model):
+    menu_name = models.CharField(max_length=255, blank=True, null=True)
+    menu_description = models.TextField()
+    menu_img = models.ImageField(upload_to='menu_images/')
+    
+    meat_pie = models.DecimalField(max_digits=70, decimal_places=2, default=0.00)
+    Fried_Plantain= models.DecimalField(max_digits=70, decimal_places=2, default=0.00)
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    
+    class Meta:
+        ordering =['-created_at']
+
+    def total_amount(self):
+        return sum(
+            getattr(self, f'item{i}', 0) for i in range(1, 9)
+        )
+
+    def __str__(self):
+        return self.menu_name or f"FoodRecord #{self.id} on {self.created_at.date()}"
+
+    def get_absolute_url(self):
+        return reverse('home')

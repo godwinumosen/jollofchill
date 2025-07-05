@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content%}
+
+
+<section class="py-5 text-white text-center" style="background-color: #98681e;">
+  <div class="container">
+    <h1 class="display-5">Jollof and Chill</h1>
+    <p class="lead">Menu Orders</p>
+  </div>
+</section>
+
+<div class="container py-5">
+
+  <!-- Image & Info -->
+  <div class="row g-4">
+    <div class="col-md-6">
+      <img src="{{ object.second_jollof_and_chill_img.url }}" class="img-fluid rounded" alt="Restaurant Image">
+    </div>
+    <div class="col-md-6">
+      <h3>At a Glance</h3>
+      <p>Crafted with Care. Serving authentic flavours with love and tradition for over 10 years..</p>
+      
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><strong>Food Type: </strong>   </li>
+        <li class="list-group-item"><strong>Opening Hours: </strong>   </li>
+        <li class="list-group-item"><strong>description: </strong>   </li>
+      </ul>
+
+      <a href="https://wa.me/+447466183918?text=Hi Jollof and Chill ?"target="_blank" class="btn btn-primary mt-4">Make an Order</a><br><br>
+    
+    </div>
+   
+  </div>
+</div>
+
+
+
+
+<!-- Team Start -->
+        <div class="container-fluid team pb-5">
+            <div class="container pb-5">
+                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;"><br>
+                    <p class="text-uppercase text-secondary fs-5 mb-0">Meet the Restaurants</p>
+                    <h3 class=" text-capitalize mb-3">Handpicked selection.</h3>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
+                         <a href="{% url 'order' %}">
+                        <div class="team-item border border-primary p-1">
+                            <div class="team-border-style-1"></div>
+                            <div class="team-border-style-2"></div>
+                            <div class="team-border-style-3"></div>
+                            <div class="team-border-style-4"></div>
+                            <div class="team-img">
+                                <img src="{% static 'img/team-1.jpg' %}" class="img-fluid w-100" alt="">
+                                <div class="team-icon d-flex justify-content-around">
+                                </div>
+                            </div>
+                            <div class="text-center border border-top-0 bg-white py-3">
+                                <h5 class="mb-0">Homemade fried rice</h5>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                    <div class="col-lg-3 wow fadeInUp" data-wow-delay="0.4s">
+                        <a href="{% url 'order' %}">
+                        <div class="team-item border border-primary p-1">
+                            <div class="team-border-style-1"></div>
+                            <div class="team-border-style-2"></div>
+                            <div class="team-border-style-3"></div>
+                            <div class="team-border-style-4"></div>
+                            <div class="team-img">
+                                <img src="{% static 'img/team-2.jpg'%}" class="img-fluid w-100" alt="">
+                                <div class="team-icon d-flex justify-content-around">
+                                </div>
+                            </div>
+                            <div class="text-center border border-top-0 bg-white py-3">
+                                <h5 class="mb-0">fried rice recipe</h5>
+                            </div>
+                        </div>
+                         </a>
+                    </div>
+                    <div class="col-lg-3 wow fadeInUp" data-wow-delay="0.6s">
+                         <a href="{% url 'order' %}">
+                        <div class="team-item border border-primary p-1">
+                            <div class="team-border-style-1"></div>
+                            <div class="team-border-style-2"></div>
+                            <div class="team-border-style-3"></div>
+                            <div class="team-border-style-4"></div>
+                            <div class="team-img">
+                                <img src="{% static 'img/team-3.jpg'%}" class="img-fluid w-100" alt="">
+                                <div class="team-icon d-flex justify-content-around">
+                                </div>
+                            </div>
+                            <div class="text-center border border-top-0 bg-white py-3">
+                                <h5 class="mb-0">jollof rice and beef</h5>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                    <div class="col-lg-3 wow fadeInUp" data-wow-delay="0.8s">
+                         <a href="{% url 'order' %}">
+                        <div class="team-item border border-primary p-1">
+                            <div class="team-border-style-1"></div>
+                            <div class="team-border-style-2"></div>
+                            <div class="team-border-style-3"></div>
+                            <div class="team-border-style-4"></div>
+                            <div class="team-img">
+                                <img src="{% static 'img/team-4.jpg'%}" class="img-fluid w-100" alt="">
+                                <div class="team-icon d-flex justify-content-around">
+                                   
+                                </div>
+                            </div>
+                            <div class="text-center border border-top-0 bg-white py-3">
+                                <h5 class="mb-0">Egusi soup with meat combo</h5>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                      <div class="btn-wrapper">
+                      <a href=""onclick="history.back(); return false;" class="btn btn-primary"style="border-radius: 5px;font-family: Georgia;"> Back </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Team End -->
+
+{% endblock%}

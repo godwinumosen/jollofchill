@@ -1,7 +1,8 @@
 from django.contrib import admin
 # Register your models here.
 from . import models
-from .models import JollofandChillHeroHead,SecondJollofandChillPostModel,ReviewJollofandChill
+from .models import JollofandChillHeroHead,SecondJollofandChillPostModel
+from .models import ReviewJollofandChill,MenuJollofandChil
 
 
 #The JollofandChill main post model admin
@@ -22,3 +23,7 @@ class ReviewJollofandChillPostModelAdmin (admin.ModelAdmin):
     prepopulated_fields = {'review_slug': ('review_name',)}
     list_display = ['review_description','review_img','review_author']
 admin.site.register(ReviewJollofandChill, ReviewJollofandChillPostModelAdmin)
+
+class MenuJollofandChilPostModelAdmin (admin.ModelAdmin):
+    list_display = ['menu_description','menu_img','menu_name']
+admin.site.register(MenuJollofandChil, MenuJollofandChilPostModelAdmin)

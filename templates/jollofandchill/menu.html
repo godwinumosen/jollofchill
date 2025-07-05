@@ -8,60 +8,22 @@
 
 <div class="container py-5">
   <h1 class="text-center mb-5">Our Menu</h1>
-  
   <!-- Set 3 columns on medium and up -->
   <div class="row row-cols-1 row-cols-md-3 g-4">
-    
     <!-- Menu Item 1 -->
     <div class="col">
+      {% for post in object_list%}
       <div class="card h-100">
-        <img src="{% static 'img/team-3.jpg'%}" class="card-img-top" alt="Jollof Rice">
+        <img src="{{ post.menu_img.url}}"style="border-radius: 10px;" class="card-img-top" alt="Jollof Rice">
         <div class="card-body">
-          <h5 class="card-title">Jollof Rice, Chicken & Plantain</h5>
-          <p class="card-text">Spicy jollof rice with juicy chicken and sweet fried plantains.</p>
-          <p class="text-primary fw-bold">₦3,500</p>
+          <h5 class="card-title">{{ post.menu_name}}</h5>
+          <p class="card-text">{{ post.menu_description}}</p>
+          <a class="btn btn-secondary py-2 px-4" href="{% url 'menu_detail' jollofandchill.pk %}">Open</a>
         </div>
       </div>
+      {%endfor%}
     </div>
-
-    <!-- Menu Item 2 -->
-    <div class="col">
-      <div class="card h-100">
-        <img src="{% static 'img/team-3.jpg'%}" class="card-img-top" alt="Egusi Soup">
-        <div class="card-body">
-          <h5 class="card-title">Egusi Soup with Pounded Yam</h5>
-          <p class="card-text">Rich melon seed soup served with soft, fluffy pounded yam.</p>
-          <p class="text-primary fw-bold">₦3,000</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Menu Item 3 -->
-    <div class="col">
-      <div class="card h-100">
-        <img src="{% static 'img/team-3.jpg'%}" class="card-img-top" alt="Fried Rice">
-        <div class="card-body">
-          <h5 class="card-title">Fried Rice & Chicken</h5>
-          <p class="card-text">Golden fried rice served with crispy or grilled chicken.</p>
-          <p class="text-primary fw-bold">₦3,200</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Menu Item 4 -->
-    <div class="col">
-      <div class="card h-100">
-        <img src="{% static 'img/team-3.jpg'%}" class="card-img-top" alt="Pepper Soup">
-        <div class="card-body">
-          <h5 class="card-title">Goat Meat Pepper Soup</h5>
-          <p class="card-text">Spicy and flavorful soup with tender pieces of goat meat.</p>
-          <p class="text-primary fw-bold">₦2,800</p>
-        </div>
-      </div>
-    </div>
-
     <!-- Add more items as needed -->
-
   </div>
 </div>
 

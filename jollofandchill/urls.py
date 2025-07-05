@@ -1,7 +1,7 @@
 
 from django.urls import path
 from . import views
-from .views import HomeView,JolloAndChillArticleDetailView
+from .views import HomeView,JolloAndChillArticleDetailView,Menu,MenuArticleDetailView
 #from .views import SubPictureDetailView,SubVideoDetailView
 
 urlpatterns = [
@@ -12,10 +12,11 @@ urlpatterns = [
     path('article/<int:pk>/', JolloAndChillArticleDetailView.as_view(), name="detail"),
     path('order/', views.Order, name='order'),
     path('wallect/', views.Wallect, name='wallect'),
-    #path('article2/<int:pk>/', SecondConstructionDetailViewArticleDetailView.as_view(), name="second_detail"),
     path('about/', views.About, name='about'),
     path('message/', views.message, name='message'),
-    path('menu/', views.Menu, name='menu'),
+    #path('menu/', views.Menu, name='menu'),
+    path('menu/', Menu.as_view(), name='menu'),
+    path('article2/<int:pk>/', MenuArticleDetailView.as_view(), name="menu_detail"),
     
 ]
 
