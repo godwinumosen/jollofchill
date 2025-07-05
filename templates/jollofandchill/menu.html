@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}Our Menu{% endblock %}
+{% block title %}Food Menu{% endblock %}
 
 {% block content %}
 <body>
@@ -11,18 +11,20 @@
   <!-- Set 3 columns on medium and up -->
   <div class="row row-cols-1 row-cols-md-3 g-4">
     <!-- Menu Item 1 -->
+     {% for post in object_list%}
     <div class="col">
-      {% for post in object_list%}
       <div class="card h-100">
+         <a class="btn btn-secondary py-2 px-4" href="https://wa.me/+447466183918?text=Hi Jollof and Chill ?"target="_blank">
         <img src="{{ post.menu_img.url}}"style="border-radius: 10px;" class="card-img-top" alt="Jollof Rice">
         <div class="card-body">
           <h5 class="card-title">{{ post.menu_name}}</h5>
           <p class="card-text">{{ post.menu_description}}</p>
-          <a class="btn btn-secondary py-2 px-4" href="https://wa.me/+447466183918?text=Hi Jollof and Chill ?"target="_blank">Order</a>
         </div>
+        </a>
       </div>
-      {%endfor%}
+      
     </div>
+    {%endfor%}
     <!-- Add more items as needed -->
   </div>
 </div>
