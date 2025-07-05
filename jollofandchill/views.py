@@ -73,10 +73,9 @@ class Menu(ListView):
     model = MenuJollofandChil
     template_name = 'jollofandchill/menu.html'
 
-#The event of deus magnus' article details class base view
-class MenuArticleDetailView(DetailView):
+'''class MenuArticleDetailView(DetailView):
     model = MenuJollofandChil
     template_name = 'jollofandchill/menu_article.html'
     def MenuArticleDetailView(request, pk): 
         object = get_object_or_404(MenuJollofandChil, pk=pk)
-        return render(request, 'jollofandchill/menu_article.html',{'menu_detail': object})
+        return render(request, 'jollofandchill/menu_article.html',{'menu_detail': object})'''

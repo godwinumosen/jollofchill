@@ -1,7 +1,7 @@
 
 from django.urls import path
 from . import views
-from .views import HomeView,JolloAndChillArticleDetailView,Menu,MenuArticleDetailView
+from .views import HomeView,JolloAndChillArticleDetailView,Menu
 #from .views import SubPictureDetailView,SubVideoDetailView
 
 urlpatterns = [
@@ -16,7 +16,7 @@ urlpatterns = [
     path('message/', views.message, name='message'),
     #path('menu/', views.Menu, name='menu'),
     path('menu/', Menu.as_view(), name='menu'),
-    path('article2/<int:pk>/', MenuArticleDetailView.as_view(), name="menu_detail"),
+    #path('article2/<int:pk>/', MenuArticleDetailView.as_view(), name="menu_detail"),
     
 ]
 

@@ -18,7 +18,7 @@
         <div class="card-body">
           <h5 class="card-title">{{ post.menu_name}}</h5>
           <p class="card-text">{{ post.menu_description}}</p>
-          <a class="btn btn-secondary py-2 px-4" href="{% url 'menu_detail' jollofandchill.pk %}">Open</a>
+          <a class="btn btn-secondary py-2 px-4" href="{% url 'menu_detail' post.pk %}">Open</a>
         </div>
       </div>
       {%endfor%}
