@@ -58,6 +58,26 @@ body{
     height: 66px;
 }
 
+
+/* Keep navbar height fixed */
+.navbar {
+  height: 80px !important;
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+}
+
+/* Logo sizing without stretching navbar */
+.navbar-logo {
+  height: 300%;
+  max-height: 150px;
+  object-fit: contain;
+  transform: scale(1.3);          /* visually makes it bigger */
+  transform-origin: left center;
+}
+
+
+
 .btn-square,
 .btn-sm-square,
 .btn-md-square,
