@@ -69,7 +69,7 @@ body{
 
 /* Logo style */
 .navbar-logo {
-  max-height: 150px;
+  max-height: 170px;
   object-fit: contain;
   transform: scale(1.3);
   transform-origin: left center;
