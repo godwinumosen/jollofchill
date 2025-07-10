@@ -1,103 +1,77 @@
 {% extends "base.html" %}
 {% load static %}
-
-{% block title %}Food Menu{% endblock %}
-
-{% block content %}
+{% block content%}
 <section class="py-5 text-white text-center" style="background-color: #98681e;">
   <div class="container">
     <h1 class="display-5 fw-bold">Our Menu</h1>
-    <p class="lead">Jollof and Chill.</p>
+    <p class="lead">Jollof and Chill</p>
   </div>
 </section>
 
-<div class="container my-5 d-flex justify-content-center">
-  <div class="card shadow w-100" style="max-width: 600px;">
-    <div class="card-header bg-dark text-white">
-      <h5 class="mb-0">MAIN DISH</h5>
-      <small>
-        All Rice dishes are served with either fried/grilled chicken, assorted meat, fried fish or fried turkey
-      </small>
+<!-- Row of Cards -->
+<div class="container my-5">
+  <div class="row justify-content-center g-4">
+
+    <!-- Card 1 -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card h-100 shadow">
+        <div class="card-header bg-dark text-white">
+          <h5 class="mb-0">Main Dishes</h5>
+          <small>Includes meats/fish/turkey</small>
+        </div>
+        <div class="card-body p-0">
+          <table class="table table-striped mb-0">
+            <tbody>
+              <tr><td>Jollof Rice</td><td class="text-end">£10</td></tr>
+              <tr><td>Fried Rice</td><td class="text-end">£10</td></tr>
+              <tr><td>White Rice &amp; Stew</td><td class="text-end">£15</td></tr>
+              <tr><td>Coconut Rice</td><td class="text-end">£15</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
-    <div class="card-body p-0">
-      <table class="table table-striped table-hover mb-0">
-        <tbody>
-          <tr><td>Jollof Rice</td><td class="text-end">£10</td></tr>
-          <tr><td>Fried Rice</td><td class="text-end">£10</td></tr>
-          <tr><td>White Rice &amp; Stew</td><td class="text-end">£15</td></tr>
-          <tr><td>Banga Rice</td><td class="text-end">£15</td></tr>
-          <tr><td>Coconut Rice</td><td class="text-end">£15</td></tr>
-          <tr><td>Yam Porridge</td><td class="text-end">£15</td></tr>
-          <tr><td>Poule Deje</td><td class="text-end">£15</td></tr>
-          <tr><td>Fried Beans</td><td class="text-end">£15</td></tr>
-          <tr><td>Sadza (with Assorted Meat &amp; Vegetable Stew)</td><td class="text-end">£15</td></tr>
-          <tr><td>Ukodo (Yam &amp; Plantain Goat Meat Pepper Soup)</td><td class="text-end">£15</td></tr>
-          <tr><td>Yam Delight (Boiled Yam, Fried Vegetable Sauce with Assorted Meat or Fried Fish)</td><td class="text-end">£15</td></tr>
-        </tbody>
-      </table>
+
+    <!-- Card 2 -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card h-100 shadow">
+        <div class="card-header bg-dark text-white">
+          <h5 class="mb-0">Side Dishes</h5>
+          <small>Add-ons & light meals</small>
+        </div>
+        <div class="card-body p-0">
+          <table class="table table-striped mb-0">
+            <tbody>
+              <tr><td>Moi Moi</td><td class="text-end">£5</td></tr>
+              <tr><td>Fried Plantain</td><td class="text-end">£4</td></tr>
+              <tr><td>Pounded Yam</td><td class="text-end">£5</td></tr>
+              <tr><td>Egusi Soup</td><td class="text-end">£7</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
+
+    <!-- Card 3 -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card h-100 shadow">
+        <div class="card-header bg-dark text-white">
+          <h5 class="mb-0">Drinks</h5>
+          <small>Cold & refreshing</small>
+        </div>
+        <div class="card-body p-0">
+          <table class="table table-striped mb-0">
+            <tbody>
+              <tr><td>Zobo</td><td class="text-end">£3</td></tr>
+              <tr><td>Chapman</td><td class="text-end">£4</td></tr>
+              <tr><td>Water</td><td class="text-end">£1</td></tr>
+              <tr><td>Juice</td><td class="text-end">£3</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
-
-
-<div class="container my-5 d-flex justify-content-center">
-  <div class="card shadow w-100" style="max-width: 600px;">
-    <div class="card-header bg-dark text-white">
-      <h5 class="mb-0">MAIN DISH</h5>
-      <small>
-        All Rice dishes are served with either fried/grilled chicken, assorted meat, fried fish or fried turkey
-      </small>
-    </div>
-    <div class="card-body p-0">
-      <table class="table table-striped table-hover mb-0">
-        <tbody>
-          <tr><td>Jollof Rice</td><td class="text-end">£10</td></tr>
-          <tr><td>Fried Rice</td><td class="text-end">£10</td></tr>
-          <tr><td>White Rice &amp; Stew</td><td class="text-end">£15</td></tr>
-          <tr><td>Banga Rice</td><td class="text-end">£15</td></tr>
-          <tr><td>Coconut Rice</td><td class="text-end">£15</td></tr>
-          <tr><td>Yam Porridge</td><td class="text-end">£15</td></tr>
-          <tr><td>Poule Deje</td><td class="text-end">£15</td></tr>
-          <tr><td>Fried Beans</td><td class="text-end">£15</td></tr>
-          <tr><td>Sadza (with Assorted Meat &amp; Vegetable Stew)</td><td class="text-end">£15</td></tr>
-          <tr><td>Ukodo (Yam &amp; Plantain Goat Meat Pepper Soup)</td><td class="text-end">£15</td></tr>
-          <tr><td>Yam Delight (Boiled Yam, Fried Vegetable Sauce with Assorted Meat or Fried Fish)</td><td class="text-end">£15</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</div>
-
-
-<div class="container my-5 d-flex justify-content-center">
-  <div class="card shadow w-100" style="max-width: 600px;">
-    <div class="card-header bg-dark text-white">
-      <h5 class="mb-0">MAIN DISH</h5>
-      <small>
-        All Rice dishes are served with either fried/grilled chicken, assorted meat, fried fish or fried turkey
-      </small>
-    </div>
-    <div class="card-body p-0">
-      <table class="table table-striped table-hover mb-0">
-        <tbody>
-          <tr><td>Jollof Rice</td><td class="text-end">£10</td></tr>
-          <tr><td>Fried Rice</td><td class="text-end">£10</td></tr>
-          <tr><td>White Rice &amp; Stew</td><td class="text-end">£15</td></tr>
-          <tr><td>Banga Rice</td><td class="text-end">£15</td></tr>
-          <tr><td>Coconut Rice</td><td class="text-end">£15</td></tr>
-          <tr><td>Yam Porridge</td><td class="text-end">£15</td></tr>
-          <tr><td>Poule Deje</td><td class="text-end">£15</td></tr>
-          <tr><td>Fried Beans</td><td class="text-end">£15</td></tr>
-          <tr><td>Sadza (with Assorted Meat &amp; Vegetable Stew)</td><td class="text-end">£15</td></tr>
-          <tr><td>Ukodo (Yam &amp; Plantain Goat Meat Pepper Soup)</td><td class="text-end">£15</td></tr>
-          <tr><td>Yam Delight (Boiled Yam, Fried Vegetable Sauce with Assorted Meat or Fried Fish)</td><td class="text-end">£15</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</div>
-
-
-
-
 {% endblock %}
