@@ -67,7 +67,7 @@ class ReviewJollofandChill(models.Model):
         return reverse('home')
     
 
-class MenuJollofandChil(models.Model):
+'''class MenuJollofandChil(models.Model):
     menu_name = models.CharField(max_length=255, blank=True, null=True)
     menu_description = models.TextField()
     menu_img = models.ImageField(upload_to='menu_images/')
@@ -81,4 +81,4 @@ class MenuJollofandChil(models.Model):
         return self.menu_name or f"FoodRecord #{self.id} on {self.created_at.date()}"
 
     def get_absolute_url(self):
-        return reverse('home')
+        return reverse('home')'''

@@ -2,7 +2,7 @@ from django.contrib import admin
 # Register your models here.
 from . import models
 from .models import JollofandChillHeroHead,SecondJollofandChillPostModel
-from .models import ReviewJollofandChill,MenuJollofandChil
+from .models import ReviewJollofandChill #,MenuJollofandChil
 
 
 #The JollofandChill main post model admin
@@ -24,6 +24,6 @@ class ReviewJollofandChillPostModelAdmin (admin.ModelAdmin):
     list_display = ['review_description','review_img','review_author']
 admin.site.register(ReviewJollofandChill, ReviewJollofandChillPostModelAdmin)
 
-class MenuJollofandChilPostModelAdmin (admin.ModelAdmin):
+'''class MenuJollofandChilPostModelAdmin (admin.ModelAdmin):
     list_display = ['menu_description','menu_img','menu_name']
-admin.site.register(MenuJollofandChil, MenuJollofandChilPostModelAdmin)
+admin.site.register(MenuJollofandChil, MenuJollofandChilPostModelAdmin)'''
